@@ -1,8 +1,13 @@
 package com.example.cashcard;
 
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
 import java.util.Optional;
 
 @RestController
@@ -23,6 +28,11 @@ class CashCardController{
         }else {
             return ResponseEntity.notFound().build();
         }
+    }
+
+    @PostMapping
+    private ResponseEntity<Void> createCashCard(){
+        return null;
     }
 
 
